@@ -7,6 +7,11 @@ const Navbar: React.FC = () => {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const location = useLocation();
 
+  // rutas para no mostrar
+  const hideOnPaths = ["/LandingPage"]; // "/landing", "/home"
+  if (hideOnPaths.includes(location.pathname)) return null;
+  // --------------------------------------------------------------
+
   const isActive = (path: string) => {
     return location.pathname === path;
   };
