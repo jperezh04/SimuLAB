@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { School, Mail, Lock, LogIn, Eye, EyeOff, Rocket, Zap, Atom, Microscope } from "lucide-react";
 
 const LoginPage: React.FC = () => {
@@ -210,9 +211,12 @@ const LoginPage: React.FC = () => {
             <div className="mt-6 pt-6 border-t border-gray-200 text-center">
               <p className="text-gray-600">
                 ¿No tienes una cuenta?{" "}
-                <span className="text-blue-600 font-semibold hover:underline cursor-pointer">
+                <Link 
+                  to="/register" 
+                  className="text-blue-600 font-semibold hover:underline cursor-pointer"
+                >
                   Regístrate aquí
-                </span>
+                </Link>
               </p>
             </div>
           </div>
