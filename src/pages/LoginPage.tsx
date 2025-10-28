@@ -17,7 +17,25 @@ const LoginPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center p-6">
-      
+      {/* Navbar */}
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-3 group">
+            <span className="text-4xl transform group-hover:scale-110 transition-transform duration-300">⚛️</span>
+            <span className="font-bold text-2xl">
+              <span className="text-blue-600">Lab</span>
+              <span className="text-gray-800">Cat</span>
+            </span>
+          </a>
+          
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+            <a href="#sobre-nosotros" className="hover:text-blue-600 transition-colors duration-200">Sobre nosotros</a>
+            <a href="#laboratorios" className="hover:text-blue-600 transition-colors duration-200">Laboratorios</a>
+            <a href="#como-funciona" className="hover:text-blue-600 transition-colors duration-200">Cómo funciona</a>
+            <a href="#beneficios" className="hover:text-blue-600 transition-colors duration-200">Beneficios</a>
+          </nav>
+        </div>
+      </header>
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         
         {/* Sección Izquierda - Visual/Branding */}

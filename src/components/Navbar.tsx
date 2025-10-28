@@ -17,7 +17,6 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { path: "/", label: "Inicio" },
     { path: "/simulations", label: "Simulaciones" },
   ];
 
