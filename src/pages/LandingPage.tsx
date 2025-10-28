@@ -1,6 +1,6 @@
 import '../index.css'
 import { Link } from "react-router-dom";
-import { Atom, Microscope, Zap, BookOpen, Users, GraduationCap, Menu, ArrowRight } from "lucide-react";
+import { Atom, Microscope, Zap, BookOpen, Users, GraduationCap, Menu, ArrowRight, Building2 } from "lucide-react";
 
 const SUBJECTS = [
   { id: "quimica", nombre: "Química", icon: <Atom className="w-6 h-6" />, desc: "Reacciones y experimentos" },
@@ -64,24 +64,24 @@ const LandingPage: React.FC = () => {
             </p>
             
             <p className="text-lg font-semibold text-blue-700">
-              La plataforma educativa que transforma el aprendizaje de ciencias en Perú.
+              Plataforma educativa que conecta colegios con tecnología de laboratorios virtuales.
             </p>
             
             {/* Botones CTA */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link 
-                to="/register" 
+                to="/login" 
                 className="group px-8 py-4 rounded-full bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl text-center flex items-center justify-center gap-2"
               >
-                Registrar mi colegio
+                Acceder a la plataforma
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                to="/login" 
+              <a 
+                href="#contacto"
                 className="px-8 py-4 rounded-full border-2 border-gray-300 bg-white text-gray-700 font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 text-center"
               >
-                Ver demo
-              </Link>
+                Solicitar demo
+              </a>
             </div>
             
             {/* Stats */}
@@ -138,7 +138,7 @@ const LandingPage: React.FC = () => {
               <span className="font-bold text-blue-700">LabCat</span> es una plataforma de laboratorios virtuales que permite a estudiantes de secundaria experimentar con <span className="font-semibold text-indigo-600">Física, Química y Biología</span> de manera segura, accesible y sin necesidad de equipos costosos.
             </p>
             <p className="text-xl text-center mt-6 font-bold text-blue-600">
-              ¡Hacemos que la práctica científica sea accesible para todos los colegios de Perú!
+              Proveemos soluciones tecnológicas educativas a colegios de todo el Perú.
             </p>
           </div>
         </div>
@@ -181,7 +181,7 @@ const LandingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Cómo funciona</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
-            <p className="text-gray-600 mt-4 text-lg">Tres simples pasos para empezar</p>
+            <p className="text-gray-600 mt-4 text-lg">Proceso de implementación en tu colegio</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -191,9 +191,9 @@ const LandingPage: React.FC = () => {
                 1
               </div>
               <div className="pt-4 space-y-3">
-                <h3 className="text-xl font-bold text-gray-800">Regístrate</h3>
+                <h3 className="text-xl font-bold text-gray-800">Tu colegio se suscribe</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Crea una cuenta para tu colegio y obtén acceso completo a todos los laboratorios virtuales.
+                  El colegio contacta con nosotros y obtiene acceso institucional completo a la plataforma.
                 </p>
               </div>
             </div>
@@ -204,9 +204,9 @@ const LandingPage: React.FC = () => {
                 2
               </div>
               <div className="pt-4 space-y-3">
-                <h3 className="text-xl font-bold text-gray-800">Asigna prácticas</h3>
+                <h3 className="text-xl font-bold text-gray-800">Alumnos se registran</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Los profesores seleccionan los experimentos y los asignan a sus estudiantes.
+                  Los estudiantes crean sus cuentas usando el código del colegio y comienzan a explorar.
                 </p>
               </div>
             </div>
@@ -217,9 +217,9 @@ const LandingPage: React.FC = () => {
                 3
               </div>
               <div className="pt-4 space-y-3">
-                <h3 className="text-xl font-bold text-gray-800">Experimenta</h3>
+                <h3 className="text-xl font-bold text-gray-800">Aprenden practicando</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Los estudiantes realizan experimentos interactivos y reciben evaluación automática.
+                  Los profesores asignan experimentos y los alumnos practican con evaluación automática.
                 </p>
               </div>
             </div>
@@ -249,7 +249,7 @@ const LandingPage: React.FC = () => {
                 <Users className="w-8 h-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-3">Acceso Ilimitado</h3>
-              <p className="text-gray-600">Todos los estudiantes y profesores de tu colegio pueden acceder 24/7.</p>
+              <p className="text-gray-600">Todos los estudiantes del colegio pueden acceder 24/7 desde cualquier dispositivo.</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
@@ -263,21 +263,40 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-indigo-700">
+      {/* CTA Final - Para Colegios */}
+      <section id="contacto" className="py-20 bg-gradient-to-br from-blue-600 to-indigo-700">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center text-white space-y-6">
-            <h3 className="text-4xl md:text-5xl font-bold">¡Transforma la educación científica en tu colegio!</h3>
+          <div className="text-center text-white space-y-6 mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
+              <Building2 className="w-4 h-4" />
+              Para instituciones educativas
+            </div>
+            <h3 className="text-4xl md:text-5xl font-bold">¿Eres director o representante de un colegio?</h3>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Únete a los colegios que ya están revolucionando el aprendizaje de ciencias con LabCat.
+              Contáctanos para implementar LabCat en tu institución y transforma la educación científica.
             </p>
-            <Link 
-              to="/register" 
-              className="inline-flex items-center gap-2 px-10 py-4 rounded-full bg-white text-blue-600 font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 mt-8"
-            >
-              Registrar mi colegio ahora
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h4 className="text-xl font-bold text-white mb-4">Contacto Comercial</h4>
+              <div className="space-y-3 text-blue-100">
+                <p>📧 ventas@labcat.edu.pe</p>
+                <p>📱 +51 999 888 777</p>
+                <p>⏰ Lun - Vie: 9AM - 6PM</p>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h4 className="text-xl font-bold text-white mb-4">¿Eres estudiante?</h4>
+              <p className="text-blue-100 mb-4">Si tu colegio ya tiene LabCat, puedes registrarte directamente:</p>
+              <Link 
+                to="/register"
+                className="inline-block w-full text-center px-6 py-3 rounded-xl bg-white text-blue-600 font-bold hover:bg-gray-100 transition-all duration-300"
+              >
+                Crear mi cuenta
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -293,7 +312,7 @@ const LandingPage: React.FC = () => {
           <nav className="flex gap-6 text-sm">
             <a href="#sobre-nosotros" className="hover:text-blue-600 transition-colors">Sobre nosotros</a>
             <a href="#laboratorios" className="hover:text-blue-600 transition-colors">Laboratorios</a>
-            <a href="#beneficios" className="hover:text-blue-600 transition-colors">Beneficios</a>
+            <a href="#contacto" className="hover:text-blue-600 transition-colors">Contacto</a>
           </nav>
         </div>
       </footer>
