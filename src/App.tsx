@@ -23,7 +23,7 @@ function App() {
         <Route path="/student" element={<StudentDashboard />} />
         <Route path="/teacher" element={<TeacherDashboard />} />
         <Route path="/simulations" element={<SimulationsPage />} />
-        <Route path="/simulation/:id" element={<SimulationDetailPage />} />
+        <Route path="/simulations/:id" element={<SimulationDetailPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/admin" element={<AdminSchoolPage />} />
         <Route path="*" element={<NotFoundPage />} />
